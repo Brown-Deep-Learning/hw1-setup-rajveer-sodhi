@@ -12,8 +12,9 @@ class Square:
     Returns:
         None
     """
-    def __init__(self):
-        pass
+    def __init__(self, name, length):
+        self.name = name
+        self.length = length
 
 
 class Multiplier:
@@ -22,7 +23,7 @@ class Multiplier:
     Args:
         None
     """
-    def __call__(self):
+    def __call__(self, int_a, int_b):
         """
         Implement the __call__ method here
         Args:
@@ -32,7 +33,7 @@ class Multiplier:
         Returns:
             result (int): The result of the multiplication
         """
-        pass
+        return int_a * int_b
 
 
 class LoggingTape:
@@ -77,6 +78,8 @@ class Logger:
     # Define the logging_tape here
     logging_tape: LoggingTape | None = None
 
+    def __init__(self):
+        pass
 
 class Car(Logger):
     def travel(self, distance):
